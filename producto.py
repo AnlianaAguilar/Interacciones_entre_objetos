@@ -4,18 +4,20 @@ class Producto:
     self.__precio = precio
     self.__stock = stock
 
-  
-  def obtener_nombre(self):
+  @property
+  def nombre(self):
     return self.__nombre
 
-  def obtener_precio(self):
+  @property
+  def precio(self):
     return self.__precio
 
-  def obtener_stock(self):
+  @property
+  def stock(self):
     return self.__stock
 
 
-  def actualizar_stock(self, cantidad):
+  def modificar_stock(self, cantidad):
     if cantidad < 0:
       self.__stock = 0
     else:
